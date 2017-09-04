@@ -10,3 +10,7 @@
     "webdriverio": "^4.8.0"
 }
 ```
+
+``` site
+Site utilizado para os testes: https://tghcastro.lojaintegrada.com.br/
+```

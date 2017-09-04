@@ -1,6 +1,6 @@
 var {defineSupportCode} = require('cucumber');
 
-var expect = require('chai').expect;
+var expect = require('unexpected');
 
 var LoginPage = require('../../pages/login.page');
 var RegistrationFormPage = require('../../pages/registration.form.page');
@@ -8,75 +8,72 @@ var RegistrationFormPage = require('../../pages/registration.form.page');
 global.syncAsync = {};
 
 defineSupportCode(function ({Given, When, Then}) {
-    Given('I go on the home page', function () {
+    Given('I go on the home page', () => {
         RegistrationFormPage.openUrl();
     });
 
-    When('I access the identification link', function () {
-        //
+    When('I access the identification link', () => {
+        RegistrationFormPage.identifyingLink.click();
     });
 
-    And('Fill the new user text box/ email text box with ""', function () {
-        //
+    When('Fill the new user text box/ email text box with {stringInDoubleQuotes}', (emailLogin) => {
+        RegistrationFormPage.emailLogin.setValue(emailLogin);
     });
 
-    And('I click the registration button', function () {
-        //
+    When('I click the registration button', () => {
+        RegistrationFormPage.submitButton.click();
     });
 
-    Then('Registration screen should be displayed', function () {
-        //
+    Then('Registration screen should be displayed', () => {
+        browser.windowHandle();
+        expect({ text: 'Dados para acesso' }, 'to equal', { text: RegistrationFormPage.accessInfo.getText() });
+    }); 
+
+    Then('I check if it is an email text box is pre-populated', () => {
+        expect({ text: 'test@test.com' }, 'to equal', { text: LoginPage.emailLogin.getValue() });
     });
 
-    And('Fill the new user text box/ email text box with ""', function () {
-        //
+    When('Fill in the confirmation email text box with {stringInDoubleQuotes}', (emailConfirm) => {
+        RegistrationFormPage.emailConfirm.setValue(emailConfirm);
     });
 
-    And('Fill in the confirmation email text box with ""', function () {
-        //
+    When('Fill in the password text box with {stringInDoubleQuotes}', (password) => {
+        LoginPage.password.setValue(password);
     });
 
-    And('I fill in the email with ""', function () {
-        //
+    When('Fill in the confirmation password text box with {stringInDoubleQuotes}', (passwordConfirm) => {
+        RegistrationFormPage.passwordConfirm.setValue(passwordConfirm);
     });
 
-    And('Fill in the passwordConfirm text box with ""', function () {
-        //
+    /* When('I click the type of register button : Type Individual', () => {
+        RegistrationFormPage.individual.click();
     });
 
-    And('Fill in the password with ""', function () {
-        //
+    When('Fill in the full name text box with {stringInDoubleQuotes}', (fullName) => {
+        RegistrationFormPage.fullName.setValue(fullName);
     });
 
-    And('I click the type of register button', function () {
-        //
+    When('Fill in the cpf text box with {stringInDoubleQuotes}', (cpf) => {
+        RegistrationFormPage.cpf.setValue(cpf);
     });
 
-    And('Fill in the full name text box with ""', function () {
-        //
+    When('Fill in the cell phone number text box with {stringInDoubleQuotes}', (cellphoneNumber) => {
+        RegistrationFormPage.cellphoneNumber.setValue(cellphoneNumber);
     });
 
-    And('Fill in the cpf text box with ""', function () {
-        //
+    When('Fill in the phone number text box with {stringInDoubleQuotes}', (phoneNumber) => {
+        RegistrationFormPage.phoneNumber.setValue(phoneNumber);
     });
 
-    And('Fill in the cell phone number text box with ""', function () {
-        //
+    When('I select the male gender in the options', () => {
+        RegistrationFormPage.male.click();
     });
 
-    And('Fill in the phone number text box with ""', function () {
-        //
+    When('Fill in the birth date text box with {stringInDoubleQuotes}', (birthDate) => {
+        RegistrationFormPage.birthDate.setValue(birthDate)
     });
 
-    And('I select the gender "" in the options', function () {
-        //
-    });
-
-    And('Fill in the birth date text box with ""', function () {
-        //
-    });
-
-    And('Fill in the zip code text box with ""', function () {
-        //
-    });
+    When('Fill in the zip code text box with {stringInDoubleQuotes}', (zipCode) => {
+        RegistrationFormPage.zipCode.setValue(zipCode);
+     }); */
 });

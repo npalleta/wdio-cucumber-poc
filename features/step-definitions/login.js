@@ -7,23 +7,23 @@ var LoginPage = require('../../pages/login.page');
 global.syncAsync = {};
 
 defineSupportCode(function ({Given, When, Then}) {
-    Given('I go on the login page', function () {
+    Given('I go on the login page', () => {
         LoginPage.openPath();
     });
 
-    When('I fill in the user with {stringInDoubleQuotes}', function (emailLogin) {
+    When('I fill in the user with {stringInDoubleQuotes}', (emailLogin) => {
         LoginPage.emailLogin.setValue(emailLogin);
     });
 
-    When('Fill in the password with {stringInDoubleQuotes}', function (password) {
+    When('Fill in the password with {stringInDoubleQuotes}', (password) => {
         LoginPage.password.setValue(password);
     });
 
-    When('I click the submit button', function () {
+    When('I click the submit button', () => {
         LoginPage.submitButton.click();
     });
 
-    Then('User Data Screen should display the username {stringInDoubleQuotes}', function (loginInfo) {
+    Then('User Data Screen should display the username {stringInDoubleQuotes}', (loginInfo) => {
         browser.windowHandle();
         expect(LoginPage.loginName.getText()).to.contain(loginInfo);
     });

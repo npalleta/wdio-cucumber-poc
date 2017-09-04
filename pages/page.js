@@ -1,13 +1,15 @@
-function Page () {
-    this.title = 'My Page';
+class Page {
+    constructor() {
+        this.title = 'My Page';
+    }
+
+    openUrl() {
+        browser.url('https://tghcastro.lojaintegrada.com.br/');
+    }
+
+    openPath(path) {
+        return browser.url('https://tghcastro.lojaintegrada.com.br/' + path);
+    }
 }
-
-Page.prototype.openUrl = function () {
-    browser.url('https://tghcastro.lojaintegrada.com.br/');
-};
-
-Page.prototype.openPath = function (path) {
-    browser.url('https://tghcastro.lojaintegrada.com.br/' + path);
-};
 
 module.exports = new Page();

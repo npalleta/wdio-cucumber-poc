@@ -1,6 +1,6 @@
 # wdio-cucumber-poc
 
-´´´ dependencies
+``` dependencies
 "devDependencies": {
     "chai": "^4.1.2",
     "unexpected": "^10.35.0",
@@ -8,5 +8,5 @@
     "wdio-dot-reporter": "0.0.9",
     "wdio-sauce-service": "^0.4.0",
     "webdriverio": "^4.8.0"
-  }
-  ´´´
+}
+```

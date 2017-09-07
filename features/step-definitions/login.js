@@ -2,7 +2,7 @@ var {defineSupportCode} = require('cucumber');
 
 var expect = require('chai').expect;
 
-var LoginPage = require('../../pages/login.page');
+var LoginPage = require('../page-objects/login.page');
 
 global.syncAsync = {};
 

@@ -1,22 +1,32 @@
 {
   "name": "wdio-cucumber-poc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "webdriverio": "^4.8.0"
+  "description": "``` dependencies \"devDependencies\": {     \"chai\": \"^4.1.2\",     \"unexpected\": \"^10.35.0\",     \"wdio-cucumber-framework\": \"^1.0.1\",     \"wdio-dot-reporter\": \"0.0.9\",     \"wdio-sauce-service\": \"^0.4.0\",     \"webdriverio\": \"^4.8.0\" } ```",
+  "main": "wdio.conf.js",
+  "directories": {
+    "test": "test"
   },
-  "devDependencies": {
+  "dependencies": {
     "chai": "^4.1.2",
     "unexpected": "^10.35.0",
-    "wdio-cucumber-framework": "^1.0.1",
-    "wdio-dot-reporter": "0.0.9",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-cucumber-framework": "^1.0.2",
+    "wdio-dot-reporter": "^0.0.9",
     "wdio-sauce-service": "^0.4.0",
     "webdriverio": "^4.8.0"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npalleta/wdio-cucumber-poc.git"
+  },
+  "author": "npalleta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npalleta/wdio-cucumber-poc/issues"
+  },
+  "homepage": "https://github.com/npalleta/wdio-cucumber-poc#readme"
 }

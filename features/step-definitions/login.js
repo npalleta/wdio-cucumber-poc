@@ -26,5 +26,6 @@ defineSupportCode(function ({Given, When, Then}) {
     Then('User Data Screen should display the username {stringInDoubleQuotes}', (loginInfo) => {
         browser.windowHandle();
         expect(LoginPage.loginName.getText()).to.contain(loginInfo);
+        return browser.end();
     });
 });

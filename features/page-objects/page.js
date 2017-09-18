@@ -1,14 +1,15 @@
 class Page {
+
     constructor() {
         this.title = 'My Page';
     }
 
     openUrl() {
-        return browser.url('https://tghcastro.lojaintegrada.com.br/');
+        return browser.url('/');
     }
 
     openPath(path) {
-        return browser.url('https://tghcastro.lojaintegrada.com.br/' + path);
+        return browser.url('/' + path);
     }
 
     handling() {

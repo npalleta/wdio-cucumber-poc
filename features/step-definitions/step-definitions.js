@@ -12,5 +12,6 @@ defineSupportCode(function ({Given, When, Then}) {
 
     Then('I expect the title of the page {stringInDoubleQuotes}', (title) => {
         expect(browser.getTitle()).to.be.eql(title);
+        return browser.end();
     });
 });

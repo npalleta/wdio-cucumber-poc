@@ -12,6 +12,10 @@
 }
 ```
 
+``` Incluso Chance
+http://chancejs.com/
+```
+
 ``` site
 Site utilizado para os testes: https://tghcastro.lojaintegrada.com.br/
 ```

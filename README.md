@@ -12,7 +12,8 @@
 }
 ```
 
-``` Incluso Chance
+``` devDependencies
+Incluso Chance
 http://chancejs.com/
 ```
 

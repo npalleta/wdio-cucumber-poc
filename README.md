@@ -1,7 +1,7 @@
 # wdio-cucumber-poc
 
 ``` dependencies
-"devDependencies": {
+"dependencies": {
     "chai": "^4.1.2",
     "unexpected": "^10.35.0",
     "wdio-allure-reporter": "^0.1.2",

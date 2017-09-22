@@ -7,6 +7,7 @@ class Register {
     }
 
     getCnpj() {
+        //
         var aux = this.getRandom() * 5 + this.getRandom() * 4 + this.getRandom() * 3 + this.getRandom() * 2 + this.getRandom() * 9 + this.getRandom() * 8 + this.getRandom() * 7 + this.getRandom() * 6 + 0 * 5 + 0 * 4 + 0 * 3 + 1 * 2;
         aux = mod(aux, 11);
         var d1 = aux < 2 ? 0 : 11 - aux;
